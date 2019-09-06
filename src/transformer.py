@@ -6,14 +6,9 @@
 
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
-import seaborn as sns
-import random
-import time
-import collections
 from tqdm import tqdm
 from tensor2tensor.utils import beam_search
-sns.set()
+
 
 
 # In[2]:
