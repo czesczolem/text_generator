@@ -232,6 +232,10 @@ for e in range(epoch):
                                      feed_dict = {model.X: batch_x,
                                                   model.Y: batch_x,
                                                   model.training: True})
+
+
+        if e % 3 == 1:
+            tf.contrib.saved_model.save_keras_model(model, 'data/')
         total_cost += cost
         total_accuracy += accuracy
         pbar.set_postfix(cost = cost, accuracy = accuracy)
